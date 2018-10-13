@@ -3,7 +3,9 @@ import chalk from "chalk"
 import minimist from "minimist"
 import Nehemiah from "nehemiah"
 import path from "path"
+
 import { Action } from "./Action"
+import { EditorConfig } from "./actions/EditorConfig"
 
 function fail(message: string) {
   console.error(chalk.red(message))
@@ -29,6 +31,7 @@ async function sync(root: string) {
     .map(dir => new Nehemiah(dir))
 
   const actions: Action[] = [
+    new EditorConfig(),
   ]
 
   for (const action of actions) {
