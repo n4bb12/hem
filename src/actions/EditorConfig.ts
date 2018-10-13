@@ -1,7 +1,10 @@
 import Nehemiah from "nehemiah"
 
 import { Action } from "../Action"
-import { templates } from "../templates"
+import { readTemplate } from "../templates"
+
+const filename = ".editorconfig"
+const template = readTemplate(filename)
 
 export class EditorConfig implements Action {
 
@@ -10,8 +13,6 @@ export class EditorConfig implements Action {
   }
 
   public async execute(n: Nehemiah): Promise<void> {
-    const filename = ".editorconfig"
-    const template = await templates.read(filename).asText()
     await n.write(filename).asText(template)
   }
 
