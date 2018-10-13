@@ -11,7 +11,7 @@
   "author": "Abraham Schilling",
   "scripts": {
     "build": "del-cli dist && tsc -p tsconfig.json",
-    "dev": "ts-node src/cli",
+    "dev": "ts-node --files src/cli",
     "lint": "tslint -c tslint.json -p tsconfig.json -t stylish --fix",
     "sync": "yarn dev sync"
   },
