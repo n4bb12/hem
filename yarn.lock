@@ -10,10 +10,10 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@n4bb12/config-tslint@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@n4bb12/config-tslint/-/config-tslint-1.0.0.tgz#1790146a74331f27d7fefb661157a5d0537e9131"
-  integrity sha512-txP2nyahuPJ4JvL2qP8erFXsLQm3LtCVzkKOFBlyVVwWuuCK35mympqajX3yd5jfy7zVAfadwcmIkqCNHB0TPw==
+"@n4bb12/config-tslint@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@n4bb12/config-tslint/-/config-tslint-1.1.0.tgz#1c838edee4598e01ba17b4c8fe42c9a4406dfa9d"
+  integrity sha512-1r2+nfucg1V9WTNZwJZZNEcX8ovEOEljkrZ4loXFl9LSP6eRbsKRgNhi4GepKr/nGF+1oamkgGPsusPVq4TWYw==
 
 "@nodelib/fs.stat@^1.0.1":
   version "1.1.2"
@@ -33,6 +33,11 @@
   integrity sha512-mgfd93RhzjYBUHHV532turHC2j4l/qxsF/PbfDmprHDEUHmNZGlDn1CEsulGK3AfsPdhkWzZQT/S/k0UGhLGsA==
   dependencies:
     "@types/node" "*"
+
+"@types/lodash@^4.14.117":
+  version "4.14.117"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.117.tgz#695a7f514182771a1e0f4345d189052ee33c8778"
+  integrity sha512-xyf2m6tRbz8qQKcxYZa7PA4SllYcay+eh25DN3jmNYY6gSTL7Htc/bttVdkqj2wfJGbeWlQiX8pIyJpKU+tubw==
 
 "@types/minimist@^1.2.0":
   version "1.2.0"

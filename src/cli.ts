@@ -6,6 +6,7 @@ import path from "path"
 
 import { Action } from "./Action"
 import { EditorConfig } from "./actions/EditorConfig"
+import { TSLintConfig } from "./actions/TSLintConfig"
 
 function fail(message: string) {
   console.error(chalk.red(message))
@@ -32,6 +33,7 @@ async function sync(root: string) {
 
   const actions: Action[] = [
     new EditorConfig(),
+    new TSLintConfig(),
   ]
 
   for (const action of actions) {
