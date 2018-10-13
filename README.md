@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  Personal CLI for managing projects. Based on <a href="https://github.com/n4bb12/nehemiah">nehemiah</a>.
+  CLI for generating, updating and synchronizing my personal projects – based on <a href="https://github.com/n4bb12/nehemiah">nehemiah</a>
 </p>
 
 <p align="center">
@@ -14,7 +14,3 @@
     <img alt="License" src="https://flat.badgen.net/github/license/n4bb12/hem?icon=github">
   </a>
 </p>
-
-## About
-
-CLI for generating, updating and synchronizing my personal projects.
