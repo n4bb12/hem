@@ -10,10 +10,10 @@
   "license": "ISC",
   "author": "Abraham Schilling",
   "scripts": {
-    "dev": "ts-node src/cli",
-    "sync": "yarn dev sync",
     "build": "del-cli dist && tsc -p tsconfig.json",
-    "lint": "tslint -c tslint.json -p tsconfig.json -t stylish --fix"
+    "dev": "ts-node src/cli",
+    "lint": "tslint -c tslint.json -p tsconfig.json -t stylish --fix",
+    "sync": "yarn dev sync"
   },
   "dependencies": {
     "@n4bb12/config-tslint": "^1.1.0",
