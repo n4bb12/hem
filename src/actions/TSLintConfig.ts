@@ -19,8 +19,8 @@ export class TSLintConfig implements Action {
   public async execute(n: Nehemiah): Promise<void> {
     const config = await n.read(filename).asJson<any>() || {}
 
-    config.$schema = "http://json.schemastore.org/tsconfig"
-    config.extends = uniq([...config.extends, preset])
+    config.$schema = "http://json.schemastore.org/tslint"
+    config.extends = uniq([...config.extends || [], preset])
 
     if (config.rules) {
       Object.keys(config.rules).forEach(key => {
@@ -29,8 +29,6 @@ export class TSLintConfig implements Action {
         }
       })
     }
-
-    console.log(JSON.stringify(config, null, 2))
 
     await n.write(filename).asJson(config)
   }

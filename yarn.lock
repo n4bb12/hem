@@ -1156,9 +1156,9 @@ meow@^3.6.0:
     trim-newlines "^1.0.0"
 
 merge2@^1.2.1:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.2.2.tgz#03212e3da8d86c4d8523cebd6318193414f94e34"
-  integrity sha512-bgM8twH86rWni21thii6WCMQMRMmwqqdW3sGWi9IipnVAszdLXRjwDwAnyrVXo6DuP3AjRMMttZKUB48QWIFGg==
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.2.3.tgz#7ee99dbd69bb6481689253f018488a1b902b0ed5"
+  integrity sha512-gdUU1Fwj5ep4kplwcmftruWofEFt6lfpkkr3h860CXbAB9c3hGb55EOL2ali0Td5oebvW0E1+3Sr+Ur7XfKpRA==
 
 micromatch@^3.1.10:
   version "3.1.10"
@@ -1234,9 +1234,9 @@ nanomatch@^1.2.9:
     to-regex "^3.0.1"
 
 nehemiah@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/nehemiah/-/nehemiah-0.2.2.tgz#df1c6b00ab57ddc4447cdf5d3bdac530a0f3d973"
-  integrity sha512-yG4SgZJkKBAYE1QdjLC9wQvFvsgTiEdJjIgTiasyehh0i3XXd2OlZMseu2Kxea4yIMHg3TnaNVkMfYMywieGKA==
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/nehemiah/-/nehemiah-0.2.3.tgz#648526c6df63e4d0ebe6c0a47f6c0a9fb44127b2"
+  integrity sha512-+TCnfB3NWldEZPgMMTizGanTgWzcPTCtL52wDCMu5Qp9dTQIbhXc+mCP69IUoeF317yr+CiOtclw8/Z1K4Rz5Q==
   dependencies:
     "@types/execa" "^0.9.0"
     chalk "^2.4.1"

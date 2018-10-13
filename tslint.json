@@ -1,6 +1,8 @@
 {
   "$schema": "http://json.schemastore.org/tslint",
-  "extends": ["@n4bb12/config-tslint"],
+  "extends": [
+    "@n4bb12/config-tslint"
+  ],
   "rules": {
     "no-console": false
   }
