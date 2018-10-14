@@ -3,12 +3,23 @@
   "version": "1.0.0",
   "private": true,
   "description": "Personal CLI for managing projects. Based on nehemiah.",
-  "keywords": [],
+  "keywords": [
+    "cli",
+    "configure",
+    "maintain",
+    "repo",
+    "scaffold",
+    "sync"
+  ],
   "homepage": "https://github.com/n4bb12/hem/blob/master/README.md",
   "bugs": "https://github.com/n4bb12/hem/issues",
   "repository": "github:n4bb12/hem",
   "license": "ISC",
   "author": "Abraham Schilling",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/cli.js",
   "scripts": {
     "build": "del-cli dist && tsc -p tsconfig.json",
     "dev": "ts-node --files src/cli",
