@@ -1,4 +1,5 @@
 import Nehemiah from "nehemiah"
+import sortKeys from "sort-keys"
 
 import { Action } from "../Action"
 
@@ -19,7 +20,9 @@ export class TSConfig implements Action {
 
     config.$schema = "http://json.schemastore.org/tsconfig"
 
-    await n.write(configFile).asJson(config)
+    const cleaned = sortKeys(config, { deep: true })
+
+    await n.write(configFile).asJson(cleaned)
   }
 
 }

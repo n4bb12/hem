@@ -2,6 +2,7 @@ import preset from "@n4bb12/config-tslint"
 import cleanDeep from "clean-deep"
 import { isEqual, uniq } from "lodash"
 import Nehemiah from "nehemiah"
+import sortKeys from "sort-keys"
 
 import { Action } from "../Action"
 
@@ -43,15 +44,15 @@ export class TSLintConfig implements Action {
       config.rules = cleanDeep(config.rules)
     }
 
-    const cleanConfig = cleanDeep(config)
+    const cleaned = sortKeys(cleanDeep(config), { deep: true })
 
-    if (!isEqual(cleanConfig, template)) {
+    if (!isEqual(cleaned, template)) {
       n.warn(n.name, "has custom TSLint settings")
     }
 
     await Promise.all([
       n.run("yarn add --dev tslint @n4bb12/config-tslint"),
-      n.write(configFile).asJson(cleanConfig),
+      n.write(configFile).asJson(cleaned),
     ])
   }
 
