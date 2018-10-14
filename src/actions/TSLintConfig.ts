@@ -9,15 +9,19 @@ const preset = "@n4bb12/config-tslint"
 
 export class TSLintConfig implements Action {
 
-  public async applies(n: Nehemiah): Promise<boolean> {
+  public name() {
+    return configFile
+  }
+
+  public async applies(n: Nehemiah) {
     return Promise.all([
       n.exists(filename),
       n.exists("tsconfig.json"),
     ]).then(files => files.some(file => !!file))
   }
 
-  public async execute(n: Nehemiah): Promise<void> {
-    const config = await n.read(filename).asJson<any>() || {}
+  public async execute(n: Nehemiah) {
+    const config = await n.read(configFile).asJson() || {}
 
     config.$schema = "http://json.schemastore.org/tslint"
     config.extends = uniq([...config.extends || [], preset])

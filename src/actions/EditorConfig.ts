@@ -8,11 +8,15 @@ const template = readTemplate(filename)
 
 export class EditorConfig implements Action {
 
-  public async applies(n: Nehemiah): Promise<boolean> {
+  public name() {
+    return filename
+  }
+
+  public async applies(n: Nehemiah) {
     return true
   }
 
-  public async execute(n: Nehemiah): Promise<void> {
+  public async execute(n: Nehemiah) {
     await n.write(filename).asText(template)
   }
 
