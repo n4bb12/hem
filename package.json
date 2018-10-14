@@ -27,11 +27,12 @@
     "sync": "yarn dev sync"
   },
   "dependencies": {
-    "@n4bb12/config-tslint": "^1.1.0",
+    "@n4bb12/config-tslint": "^1.2.0",
     "chalk": "^2.4.1",
+    "clean-deep": "^3.0.2",
     "lodash": "^4.17.11",
     "minimist": "^1.2.0",
-    "nehemiah": "^0.2.2"
+    "nehemiah": "^0.2.2",
     "sort-package-json": "^1.15.0"
   },
   "devDependencies": {

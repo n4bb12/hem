@@ -2,9 +2,12 @@ import template from "@n4bb12/config-tslint"
 import { isEqual, uniq } from "lodash"
 import Nehemiah from "nehemiah"
 
+import cleanDeep from "clean-deep"
+
 import { Action } from "../Action"
 
-const filename = "tslint.json"
+const projectFile = "tsconfig.json"
+const configFile = "tslint.json"
 const preset = "@n4bb12/config-tslint"
 
 export class TSLintConfig implements Action {
@@ -15,8 +18,8 @@ export class TSLintConfig implements Action {
 
   public async applies(n: Nehemiah) {
     return Promise.all([
-      n.exists(filename),
-      n.exists("tsconfig.json"),
+      n.exists(configFile),
+      n.exists(projectFile),
     ]).then(files => files.some(file => !!file))
   }
 
@@ -32,9 +35,13 @@ export class TSLintConfig implements Action {
           delete config.rules[key]
         }
       })
+      config.rules = cleanDeep(config.rules)
     }
 
-    await n.write(filename).asJson(config)
+    await Promise.all([
+      n.run("yarn add --dev @n4bb12/config-tslint"),
+      n.write(configFile).asJson(cleanDeep(config)),
+    ])
   }
 
 }

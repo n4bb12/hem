@@ -36,10 +36,10 @@ async function sync(root: string) {
 
   const actions: Action[] = [
     new EditorConfig(),
-    new TSLintConfig(),
     new GitFetchPrune(),
     new License(),
     new PackageConfig(),
+    new TSLintConfig(),
   ]
 
   for (const action of actions) {

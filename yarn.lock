@@ -10,10 +10,10 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@n4bb12/config-tslint@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@n4bb12/config-tslint/-/config-tslint-1.1.0.tgz#1c838edee4598e01ba17b4c8fe42c9a4406dfa9d"
-  integrity sha512-1r2+nfucg1V9WTNZwJZZNEcX8ovEOEljkrZ4loXFl9LSP6eRbsKRgNhi4GepKr/nGF+1oamkgGPsusPVq4TWYw==
+"@n4bb12/config-tslint@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@n4bb12/config-tslint/-/config-tslint-1.2.0.tgz#ff4a6fbea4744de1c8a7fa98d3716cc2356d1093"
+  integrity sha512-tgXqPbH+RJb48uFbpa4MU5he/ZQ+AL3z75FVt5N5/S57Q2TAXvvhNSvHE2ZT0PJ8EZ9jjVzIPEp9tOCGYPAXqg==
 
 "@nodelib/fs.stat@^1.0.1":
   version "1.1.2"
@@ -288,6 +288,15 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
+
+clean-deep@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/clean-deep/-/clean-deep-3.0.2.tgz#1b7096822f289cc491ca6d85af5c028cbb22fc23"
+  integrity sha512-sLUtFxYtHc3jM9pmwyYXOLln0nnQ1OhFrefQ7nqUlva1crHDbi4gVO+nnMSm5jztFXIRDMt+kMNh0mOscbARow==
+  dependencies:
+    lodash.isempty "^4.4.0"
+    lodash.isplainobject "^4.0.6"
+    lodash.transform "^4.6.0"
 
 cli-boxes@^1.0.0:
   version "1.0.0"
@@ -1089,6 +1098,21 @@ load-json-file@^1.0.0:
     pinkie-promise "^2.0.0"
     strip-bom "^2.0.0"
 
+lodash.isempty@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/lodash.isempty/-/lodash.isempty-4.4.0.tgz#6f86cbedd8be4ec987be9aaf33c9684db1b31e7e"
+  integrity sha1-b4bL7di+TsmHvpqvM8loTbGzHn4=
+
+lodash.isplainobject@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
+  integrity sha1-fFJqUtibRcRcxpC4gWO+BJf1UMs=
+
+lodash.transform@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/lodash.transform/-/lodash.transform-4.6.0.tgz#12306422f63324aed8483d3f38332b5f670547a0"
+  integrity sha1-EjBkIvYzJK7YSD0/ODMrX2cFR6A=
+
 lodash@^4.17.11:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
@@ -1239,9 +1263,9 @@ nanomatch@^1.2.9:
     to-regex "^3.0.1"
 
 nehemiah@^0.2.2:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/nehemiah/-/nehemiah-0.2.3.tgz#648526c6df63e4d0ebe6c0a47f6c0a9fb44127b2"
-  integrity sha512-+TCnfB3NWldEZPgMMTizGanTgWzcPTCtL52wDCMu5Qp9dTQIbhXc+mCP69IUoeF317yr+CiOtclw8/Z1K4Rz5Q==
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/nehemiah/-/nehemiah-0.2.4.tgz#03b91d0174a20057fd057be4454145bb15bf6eda"
+  integrity sha512-zTTtsWnpy52+kK1HtwAQTxYIWY6+uHuhoyR6ImorT0RT2KzZkVAFM/l8kdW/s5aN5Sdrg3kAjQKcztn1669RPA==
   dependencies:
     "@types/execa" "^0.9.0"
     chalk "^2.4.1"
