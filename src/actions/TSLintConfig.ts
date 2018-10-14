@@ -1,8 +1,7 @@
 import template from "@n4bb12/config-tslint"
+import cleanDeep from "clean-deep"
 import { isEqual, uniq } from "lodash"
 import Nehemiah from "nehemiah"
-
-import cleanDeep from "clean-deep"
 
 import { Action } from "../Action"
 
