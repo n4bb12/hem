@@ -51,7 +51,14 @@ export class TSLintConfig implements Action {
     }
 
     await Promise.all([
-      n.run("yarn add --dev tslint @n4bb12/config-tslint"),
+      n.run([
+        "yarn add",
+        "--dev",
+        "--silent",
+        "--no-progress",
+        "tslint",
+        "@n4bb12/config-tslint",
+      ].join(" ")),
       n.write(configFile).asJson(cleaned),
     ])
   }
