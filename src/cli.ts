@@ -20,6 +20,17 @@ function parseArgs() {
   return minimist(process.argv.slice(2))
 }
 
+async function performAction(action: Action, projects: Nehemiah[]) {
+  console.log(chalk.bgYellow.black(action.name()))
+
+  await Promise.all(projects.map(async project => {
+    if (await action.applies(project)) {
+      await action.execute(project)
+      console.log("  " + path.basename(project.cwd))
+    }
+  }))
+}
+
 async function sync(root: string) {
   if (!root) {
     root = path.resolve(__dirname, "../..")
@@ -43,9 +54,7 @@ async function sync(root: string) {
   ]
 
   for (const action of actions) {
-    for (const project of projects) {
-      action.execute(project)
-    }
+    await performAction(action, projects)
   }
 }
 
