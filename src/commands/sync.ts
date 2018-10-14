@@ -7,6 +7,7 @@ import { EditorConfig } from "../actions/EditorConfig"
 import { GitFetchPrune } from "../actions/GitFetchPrune"
 import { License } from "../actions/License"
 import { PackageConfig } from "../actions/PackageConfig"
+import { TSConfig } from "../actions/TSConfig"
 import { TSLintConfig } from "../actions/TSLintConfig"
 
 const actions: Action[] = [
@@ -14,6 +15,7 @@ const actions: Action[] = [
   new GitFetchPrune(),
   new License(),
   new PackageConfig(),
+  new TSConfig(),
   new TSLintConfig(),
 ]
 
