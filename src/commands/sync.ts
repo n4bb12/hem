@@ -32,7 +32,7 @@ async function performAction(action: Action, projects: Nehemiah[]) {
 
 export async function sync(rootDir: string) {
   if (!rootDir) {
-    rootDir = path.resolve(__dirname, "../..")
+    rootDir = path.resolve(__dirname, "../../..")
     // fail("Please specify the root directory as first argument")
   }
 
