@@ -1262,10 +1262,10 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-nehemiah@^0.2.2:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/nehemiah/-/nehemiah-0.2.4.tgz#03b91d0174a20057fd057be4454145bb15bf6eda"
-  integrity sha512-zTTtsWnpy52+kK1HtwAQTxYIWY6+uHuhoyR6ImorT0RT2KzZkVAFM/l8kdW/s5aN5Sdrg3kAjQKcztn1669RPA==
+nehemiah@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/nehemiah/-/nehemiah-0.3.0.tgz#3ed1cbc6e4cd88766850718612bb3cd9140aaee4"
+  integrity sha512-/jiepGy4oDRrAYTH4oHWUmVb6I8Sj2TMnJtfboyr1I010hZItDyaDR6Brm6ClZrPz4Tgxf2JRdsIkRAbguEykQ==
   dependencies:
     "@types/execa" "^0.9.0"
     chalk "^2.4.1"

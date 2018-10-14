@@ -32,7 +32,7 @@
     "clean-deep": "^3.0.2",
     "lodash": "^4.17.11",
     "minimist": "^1.2.0",
-    "nehemiah": "^0.2.2",
+    "nehemiah": "^0.3.0",
     "sort-package-json": "^1.15.0"
   },
   "devDependencies": {

@@ -19,7 +19,6 @@ export class PackageConfig implements Action {
 
   public async execute(n: Nehemiah) {
     await n.modify(filename).asJson(async config => {
-      const pkg = `Package ${config.name}`
       const slug = config.name.replace(/@.*?\//, "")
       const readme = await n.findOneOrWarning("README.md")
 
@@ -33,7 +32,7 @@ export class PackageConfig implements Action {
       config.repository = `github:n4bb12/${slug}`
 
       if (config.keywords.length < 5) {
-        n.warn(pkg, `only has ${config.keywords.length}/5 keywords`)
+        n.warn(n.name, `only has ${config.keywords.length}/5 keywords`)
       }
 
       return sortPackageJson(config)
