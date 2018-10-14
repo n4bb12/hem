@@ -6,6 +6,7 @@ import path from "path"
 
 import { Action } from "./Action"
 import { EditorConfig } from "./actions/EditorConfig"
+import { License } from "./actions/License"
 import { TSLintConfig } from "./actions/TSLintConfig"
 
 function fail(message: string) {
@@ -34,6 +35,7 @@ async function sync(root: string) {
   const actions: Action[] = [
     new EditorConfig(),
     new TSLintConfig(),
+    new License(),
   ]
 
   for (const action of actions) {
