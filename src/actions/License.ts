@@ -8,15 +8,15 @@ const template = readTemplate(filename)
 
 export class License implements Action {
 
-  public name() {
+  name() {
     return filename
   }
 
-  public async applies(n: Nehemiah) {
+  async applies(n: Nehemiah) {
     return n.exists(filename).then(exists => !exists)
   }
 
-  public async execute(n: Nehemiah) {
+  async execute(n: Nehemiah) {
     await n.write(filename).asText(template)
   }
 

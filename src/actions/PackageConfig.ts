@@ -9,15 +9,15 @@ const github = "https://github.com/n4bb12"
 
 export class PackageConfig implements Action {
 
-  public name() {
+  name() {
     return filename
   }
 
-  public async applies(n: Nehemiah) {
+  async applies(n: Nehemiah) {
     return n.exists(filename)
   }
 
-  public async execute(n: Nehemiah) {
+  async execute(n: Nehemiah) {
     await n.modify(filename).asJson(async config => {
       const slug = config.name.replace(/@.*?\//, "")
       const readme = await n.findOneOrWarning("README.md")

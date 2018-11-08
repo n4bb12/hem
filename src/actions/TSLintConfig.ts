@@ -18,18 +18,18 @@ const template = {
 
 export class TSLintConfig implements Action {
 
-  public name() {
+  name() {
     return configFile
   }
 
-  public async applies(n: Nehemiah) {
+  async applies(n: Nehemiah) {
     return Promise.all([
       n.exists(configFile),
       n.exists(projectFile),
     ]).then(files => files.some(file => !!file))
   }
 
-  public async execute(n: Nehemiah) {
+  async execute(n: Nehemiah) {
     const config = await n.read(configFile).asJson() || {}
 
     config.$schema = "http://json.schemastore.org/tslint"
