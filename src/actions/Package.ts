@@ -27,6 +27,7 @@ export class PackageConfig implements Action {
       const readme = await n.findOneOrWarning("README.md")
 
       config = cleanDeep(config)
+
       config.$schema = "http://json.schemastore.org/package"
       config.author = "Abraham Schilling"
       config.bugs = `${github}/${slug}/issues`

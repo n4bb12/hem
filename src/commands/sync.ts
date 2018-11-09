@@ -5,10 +5,10 @@ import path from "path"
 import { EditorConfig } from "../actions/EditorConfig"
 import { GitFetchPrune } from "../actions/GitFetchPrune"
 import { License } from "../actions/License"
-import { PackageConfig } from "../actions/PackageConfig"
+import { PackageConfig } from "../actions/Package"
 import { Readme } from "../actions/Readme"
 import { TSConfig } from "../actions/TSConfig"
-import { TSLintConfig } from "../actions/TSLintConfig"
+import { TSLintConfig } from "../actions/TSLint"
 import { Action } from "../types"
 
 const actions: Action[] = [
