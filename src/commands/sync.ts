@@ -7,16 +7,18 @@ import { EditorConfig } from "../actions/EditorConfig"
 import { GitFetchPrune } from "../actions/GitFetchPrune"
 import { License } from "../actions/License"
 import { PackageConfig } from "../actions/PackageConfig"
+import { Readme } from "../actions/Readme"
 import { TSConfig } from "../actions/TSConfig"
 import { TSLintConfig } from "../actions/TSLintConfig"
 
 const actions: Action[] = [
-  new EditorConfig(),
-  new GitFetchPrune(),
-  new License(),
-  new PackageConfig(),
-  new TSConfig(),
-  new TSLintConfig(),
+  // new EditorConfig(),
+  // new GitFetchPrune(),
+  // new License(),
+  // new PackageConfig(),
+  new Readme(),
+  // new TSConfig(),
+  // new TSLintConfig(),
 ]
 
 async function performAction(action: Action, projects: Nehemiah[]) {

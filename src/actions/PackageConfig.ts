@@ -4,21 +4,21 @@ import sortPackageJson from "sort-package-json"
 
 import { Action } from "../Action"
 
-const filename = "package.json"
+const configFile = "package.json"
 const github = "https://github.com/n4bb12"
 
 export class PackageConfig implements Action {
 
   name() {
-    return filename
+    return configFile
   }
 
   async applies(n: Nehemiah) {
-    return n.exists(filename)
+    return n.exists(configFile)
   }
 
   async execute(n: Nehemiah) {
-    await n.modify(filename).asJson(async config => {
+    await n.modify(configFile).asJson(async config => {
       const slug = config.name.replace(/@.*?\//, "")
       const readme = await n.findOneOrWarning("README.md")
 

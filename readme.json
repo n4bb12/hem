@@ -1,0 +1,19 @@
+{
+  "logo": "👾",
+  "description": [
+    "CLI for generating, updating and synchronizing my personal projects – based on",
+    "<a href=\"https://github.com/n4bb12/nehemiah\">nehemiah</a>"
+  ],
+  "badges": [
+    {
+      "name": "CircleCI",
+      "link": "https://circleci.com/gh/n4bb12/workflows/hem",
+      "image": "https://flat.badgen.net/circleci/github/n4bb12/hem?icon=circleci"
+    },
+    {
+      "name": "License",
+      "link": "https://raw.githubusercontent.com/n4bb12/hem/master/LICENSE",
+      "image": "https://flat.badgen.net/github/license/n4bb12/hem?icon=github"
+    }
+  ]
+}

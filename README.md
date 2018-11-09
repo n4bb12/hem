@@ -3,7 +3,10 @@
 </h1>
 
 <p align="center">
-  CLI for generating, updating and synchronizing my personal projects – based on <a href="https://github.com/n4bb12/nehemiah">nehemiah</a>
+  CLI for generating, updating and synchronizing my personal projects – based on
+  <a href="https://github.com/n4bb12/nehemiah">
+    nehemiah
+  </a>
 </p>
 
 <p align="center">
