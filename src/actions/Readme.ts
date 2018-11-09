@@ -2,8 +2,7 @@ import { html as beautifyHtml } from "js-beautify"
 import { identity } from "lodash"
 import Nehemiah from "nehemiah"
 
-import { Action } from "../Action"
-import { PackageJson } from "../types"
+import { Action, PackageJson } from "../types"
 
 const configFile = "readme.json"
 const pkgConfigFile = "package.json"

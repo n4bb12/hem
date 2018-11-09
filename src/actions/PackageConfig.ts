@@ -2,8 +2,7 @@ import cleanDeep from "clean-deep"
 import Nehemiah from "nehemiah"
 import sortPackageJson from "sort-package-json"
 
-import { Action } from "../Action"
-import { PackageJson } from "../types"
+import { Action, PackageJson } from "../types"
 
 const configFile = "package.json"
 const github = "https://github.com/n4bb12"

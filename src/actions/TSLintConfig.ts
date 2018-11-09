@@ -4,7 +4,7 @@ import { isEqual, uniq } from "lodash"
 import Nehemiah from "nehemiah"
 import sortKeys from "sort-keys"
 
-import { Action } from "../Action"
+import { Action } from "../types"
 
 const projectFile = "tsconfig.json"
 const configFile = "tslint.json"

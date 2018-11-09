@@ -1,7 +1,7 @@
 import Nehemiah from "nehemiah"
 
-import { Action } from "../Action"
 import { readTemplate } from "../templates"
+import { Action } from "../types"
 
 const filename = "LICENSE"
 const template = readTemplate(filename)

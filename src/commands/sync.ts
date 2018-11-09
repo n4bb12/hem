@@ -2,7 +2,6 @@ import chalk from "chalk"
 import Nehemiah from "nehemiah"
 import path from "path"
 
-import { Action } from "../Action"
 import { EditorConfig } from "../actions/EditorConfig"
 import { GitFetchPrune } from "../actions/GitFetchPrune"
 import { License } from "../actions/License"
@@ -10,6 +9,7 @@ import { PackageConfig } from "../actions/PackageConfig"
 import { Readme } from "../actions/Readme"
 import { TSConfig } from "../actions/TSConfig"
 import { TSLintConfig } from "../actions/TSLintConfig"
+import { Action } from "../types"
 
 const actions: Action[] = [
   // new EditorConfig(),

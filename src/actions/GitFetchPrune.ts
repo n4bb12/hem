@@ -1,6 +1,6 @@
 import Nehemiah from "nehemiah"
 
-import { Action } from "../Action"
+import { Action } from "../types"
 
 const command = "git fetch --prune"
 
