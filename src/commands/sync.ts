@@ -12,13 +12,13 @@ import { TSLintConfig } from "../actions/TSLintConfig"
 import { Action } from "../types"
 
 const actions: Action[] = [
-  // new EditorConfig(),
-  // new GitFetchPrune(),
-  // new License(),
-  // new PackageConfig(),
+  new EditorConfig(),
+  new GitFetchPrune(),
+  new License(),
+  new PackageConfig(),
   new Readme(),
-  // new TSConfig(),
-  // new TSLintConfig(),
+  new TSConfig(),
+  new TSLintConfig(),
 ]
 
 async function performAction(action: Action, projects: Nehemiah[]) {
