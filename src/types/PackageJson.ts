@@ -224,7 +224,7 @@ export interface CoreProperties {
     prerestart?: ScriptsRestart
     restart?: ScriptsRestart
     postrestart?: ScriptsRestart
-    [k: string]: string,
+    [k: string]: string | undefined,
   }
   /**
    * A 'config' hash can be used to set configuration parameters
