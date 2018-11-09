@@ -3,12 +3,12 @@ import Nehemiah from "nehemiah"
 import sortPackageJson from "sort-package-json"
 
 import { Action } from "../Action"
+import { PackageJson } from "../types"
 
 const configFile = "package.json"
 const github = "https://github.com/n4bb12"
 
 export class PackageConfig implements Action {
-
   name() {
     return configFile
   }
@@ -18,7 +18,12 @@ export class PackageConfig implements Action {
   }
 
   async execute(n: Nehemiah) {
-    await n.modify(configFile).asJson(async config => {
+    await n.modify(configFile).asJson<PackageJson>(async config => {
+      if (!config.name) {
+        n.warn(n.name, `does not have a name`)
+        config.name = ""
+      }
+
       const slug = config.name.replace(/@.*?\//, "")
       const readme = await n.findOneOrWarning("README.md")
 
@@ -38,5 +43,4 @@ export class PackageConfig implements Action {
       return sortPackageJson(config)
     })
   }
-
 }

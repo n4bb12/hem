@@ -3,6 +3,7 @@ import { identity } from "lodash"
 import Nehemiah from "nehemiah"
 
 import { Action } from "../Action"
+import { PackageJson } from "../types"
 
 const configFile = "readme.json"
 const pkgConfigFile = "package.json"
@@ -26,11 +27,6 @@ interface ReadmeConfig {
   name?: string
   description?: string | string[]
   badges?: Badge[]
-}
-
-interface PackageJson {
-  name: string
-  description?: string
 }
 
 export class Readme implements Action {
