@@ -8,6 +8,7 @@ import { GitFetchPrune } from "../actions/GitFetchPrune"
 import { License } from "../actions/License"
 import { PackageConfig } from "../actions/Package"
 import { Readme } from "../actions/Readme"
+import { ReleaseIt } from "../actions/ReleaseIt"
 import { TSConfig } from "../actions/TSConfig"
 import { TSLintConfig } from "../actions/TSLint"
 import { Action } from "../types"
@@ -19,6 +20,7 @@ const actions: Action[] = [
   new License(),
   new PackageConfig(),
   new Readme(),
+  new ReleaseIt(),
   new TSConfig(),
   new TSLintConfig(),
 ]
