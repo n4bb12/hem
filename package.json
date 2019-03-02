@@ -28,23 +28,23 @@
   },
   "dependencies": {
     "@n4bb12/config-tslint": "^1.4.1",
-    "chalk": "^2.4.1",
+    "chalk": "^2.4.2",
     "clean-deep": "^3.0.2",
-    "js-beautify": "^1.8.9",
+    "js-beautify": "^1.9.0",
     "lodash": "^4.17.11",
     "minimist": "^1.2.0",
-    "nehemiah": "^0.3.0",
+    "nehemiah": "^1.0.2",
     "sort-keys": "^2.0.0",
-    "sort-package-json": "^1.17.1"
+    "sort-package-json": "^1.20.0"
   },
   "devDependencies": {
     "@types/chalk": "^2.2.0",
-    "@types/lodash": "^4.14.119",
+    "@types/lodash": "^4.14.121",
     "@types/minimist": "^1.2.0",
     "del-cli": "^1.1.0",
-    "ts-node": "^7.0.1",
-    "tslint": "^5.11.0",
-    "typescript": "^3.2.2"
+    "ts-node": "^8.0.2",
+    "tslint": "^5.13.1",
+    "typescript": "^3.3.3333"
   },
   "$schema": "http://json.schemastore.org/package"
 }
