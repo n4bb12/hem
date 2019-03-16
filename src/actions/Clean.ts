@@ -12,6 +12,6 @@ export class Clean implements Action {
   }
 
   async execute(n: Nehemiah) {
-    await n.delete("yarn-error.log")
+    await n.delete("*.log")
   }
 }
