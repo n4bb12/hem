@@ -33,7 +33,10 @@ export class TSLintConfig implements Action {
     const config = await n.read(configFile).asJson() || {}
 
     config.$schema = "http://json.schemastore.org/tslint"
-    config.extends = uniq([...config.extends || [], presetName])
+    config.extends = Array.isArray(config.extends)
+      ? config.extends
+      : [config.extends].filter(Boolean)
+    config.extends = uniq([...config.extends, presetName])
 
     if (config.rules) {
       Object.keys(config.rules).forEach(key => {

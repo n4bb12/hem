@@ -16,10 +16,11 @@ function parseArgs() {
 async function main() {
   const args = parseArgs()
   const command = args._[0]
+  const path = args._[1]
 
   switch (command) {
     case "sync":
-      await sync(args._[1])
+      await sync(path)
       break
     default:
       fail("Please specify a command")
