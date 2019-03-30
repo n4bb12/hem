@@ -47,7 +47,7 @@ export class Readme implements Action {
     ]
     const md = parts.map(part => part.trim()).join("\n\n")
 
-    await n.write("README.md").asText(md)
+    await n.write(filename).asText(md)
   }
 }
 

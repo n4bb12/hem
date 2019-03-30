@@ -56,10 +56,14 @@ export async function sync(rootDir: string) {
   for (const project of projects) {
     announceProject(project)
 
-    const promises = actions
-      .filter(action => action.applies(project))
-      .map(action => announceAction(action))
-      .map(action => action.execute(project))
+    const promises = actions.map(action => {
+      return action.applies(project).then(applies => {
+        if (applies) {
+          announceAction(action)
+          return action.execute(project)
+        }
+      })
+    })
 
     await Promise.all(promises)
   }
