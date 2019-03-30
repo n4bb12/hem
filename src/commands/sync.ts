@@ -25,21 +25,24 @@ const actions: Action[] = [
   new TSLintConfig(),
 ]
 
-async function performAction(action: Action, projects: Nehemiah[]) {
-  console.log(chalk.bgYellow.black(action.name()))
+function log(...args: any[]) {
+  console.log("[hem sync]", ...args)
+}
 
-  await Promise.all(projects.map(async project => {
-    if (await action.applies(project)) {
-      await action.execute(project)
-      console.log("  " + path.basename(project.cwd))
-    }
-  }))
+function announceProject(project: Nehemiah) {
+  log(chalk.bgBlack.blue("Project: ".padStart(10) + path.basename(project.cwd)))
+  return project
+}
+
+function announceAction(action: Action) {
+  log(chalk.bgBlack.yellow("Action: ".padStart(10) + action.name()))
+  return action
 }
 
 export async function sync(rootDir: string) {
   if (!rootDir) {
     rootDir = path.resolve(__dirname, "../../..")
-    // fail("Please specify the root directory as first argument")
+    // throw new Error("Please specify the root directory as first argument")
   }
 
   const n = new Nehemiah(rootDir)
@@ -50,7 +53,14 @@ export async function sync(rootDir: string) {
     .map(dir => path.join(rootDir, dir))
     .map(dir => new Nehemiah(dir))
 
-  for (const action of actions) {
-    await performAction(action, projects)
+  for (const project of projects) {
+    announceProject(project)
+
+    const promises = actions
+      .filter(action => action.applies(project))
+      .map(action => announceAction(action))
+      .map(action => action.execute(project))
+
+    await Promise.all(promises)
   }
 }
