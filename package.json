@@ -33,7 +33,7 @@
     "js-beautify": "^1.9.0",
     "lodash": "^4.17.11",
     "minimist": "^1.2.0",
-    "nehemiah": "^1.0.2",
+    "nehemiah": "^1.0.4",
     "sort-keys": "^2.0.0",
     "sort-package-json": "^1.21.0"
   },

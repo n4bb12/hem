@@ -1374,10 +1374,10 @@ nanomatch@^1.2.9:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-nehemiah@^1.0.2:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/nehemiah/-/nehemiah-1.0.3.tgz#81693e8b3ad4b09a85d258eefa6d26b4202f8c73"
-  integrity sha512-Q0lWHhPzH44RQCr+C/V/jx1Kupaxh3FOT7mnlIMxP7e3nTb7eJphaFtEI3CGqx986pim+ZY5YjtLeb8YoZJ6rQ==
+nehemiah@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/nehemiah/-/nehemiah-1.0.4.tgz#606a6bdbd2cf7d0bc87c501f6965b37edbb7b195"
+  integrity sha512-RjvyhbPOakNriJPvgwmLSut8Jmk9XG009r6HErkaNlvtnUb3WTwEhxxbad7GqV16zM+YuAHgp87w3bx2sbDxgA==
   dependencies:
     "@types/execa" "^0.9.0"
     chalk "^2.4.2"
