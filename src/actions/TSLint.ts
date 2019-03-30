@@ -4,6 +4,7 @@ import { isEqual, uniq } from "lodash"
 import Nehemiah from "nehemiah"
 import sortKeys from "sort-keys"
 
+import { yarnMutex } from "../mutex"
 import { Action } from "../types"
 
 const projectFile = "tsconfig.json"
@@ -53,15 +54,20 @@ export class TSLintConfig implements Action {
       n.warn(n.name, "has custom TSLint settings")
     }
 
-    await Promise.all([
-      n.run([
+    const install = (name: string) => {
+      const cmd = [
         "yarn add",
-        "--dev",
         "--silent",
         "--no-progress",
-        "tslint",
-        "@n4bb12/config-tslint",
-      ].join(" ")),
+        `--mutex 'file:${yarnMutex}'`,
+        name,
+      ].join(" ")
+      return n.run(cmd)
+    }
+
+    await Promise.all([
+      install("--dev tslint"),
+      install("--dev @n4bb12/config-tslint"),
       n.write(configFile).asJson(cleaned),
     ])
   }
