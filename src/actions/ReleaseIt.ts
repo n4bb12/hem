@@ -9,7 +9,7 @@ const pkgConfigFile = "package.json"
 
 export class ReleaseIt implements Action {
   name() {
-    return filename
+    return "Release It! config"
   }
 
   async applies(n: Nehemiah) {

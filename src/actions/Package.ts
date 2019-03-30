@@ -9,7 +9,7 @@ const github = "https://github.com/n4bb12"
 
 export class PackageConfig implements Action {
   name() {
-    return configFile
+    return "Package config"
   }
 
   async applies(n: Nehemiah) {

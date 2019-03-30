@@ -9,7 +9,7 @@ const template = readTemplate(filename)
 export class License implements Action {
 
   name() {
-    return filename
+    return "License"
   }
 
   async applies(n: Nehemiah) {

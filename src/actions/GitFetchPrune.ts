@@ -7,7 +7,7 @@ const command = "git fetch --prune"
 export class GitFetchPrune implements Action {
 
   name() {
-    return command
+    return "Git fetch & prune"
   }
 
   async applies(n: Nehemiah) {

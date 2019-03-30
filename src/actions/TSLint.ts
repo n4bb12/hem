@@ -19,7 +19,7 @@ const template = {
 export class TSLintConfig implements Action {
 
   name() {
-    return configFile
+    return "TSLint config"
   }
 
   async applies(n: Nehemiah) {

@@ -30,7 +30,7 @@ interface ReadmeConfig {
 
 export class Readme implements Action {
   name() {
-    return filename
+    return "ReadMe"
   }
 
   async applies(n: Nehemiah) {

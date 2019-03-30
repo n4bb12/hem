@@ -8,7 +8,7 @@ const configFile = "tsconfig.json"
 export class TSConfig implements Action {
 
   name() {
-    return configFile
+    return "TS config"
   }
 
   async applies(n: Nehemiah) {

@@ -8,7 +8,7 @@ const template = readTemplate(filename)
 
 export class EditorConfig implements Action {
   name() {
-    return filename
+    return "EditorConfig"
   }
 
   async applies(n: Nehemiah) {

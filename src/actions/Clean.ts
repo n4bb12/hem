@@ -4,7 +4,7 @@ import { Action } from "../types"
 
 export class Clean implements Action {
   name() {
-    return "Cleanup"
+    return "Generic cleanup"
   }
 
   async applies(n: Nehemiah) {
