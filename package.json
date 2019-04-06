@@ -27,7 +27,6 @@
     "sync": "yarn dev sync"
   },
   "dependencies": {
-    "@n4bb12/config-tslint": "^1.4.1",
     "chalk": "^2.4.2",
     "clean-deep": "^3.0.2",
     "js-beautify": "^1.9.0",
@@ -38,6 +37,7 @@
     "sort-package-json": "^1.21.0"
   },
   "devDependencies": {
+    "@n4bb12/config-tslint": "^1.4.1",
     "@types/chalk": "^2.2.0",
     "@types/lodash": "^4.14.123",
     "@types/minimist": "^1.2.0",
