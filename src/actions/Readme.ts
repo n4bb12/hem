@@ -1,5 +1,5 @@
+import { titleCase } from "change-case"
 import { html as beautifyHtml } from "js-beautify"
-import { identity } from "lodash"
 import Nehemiah from "nehemiah"
 
 import { Action, PackageJson } from "../types"
@@ -58,8 +58,8 @@ function html(ugly: string): string {
 
 function formatTitle(config: ReadmeConfig, pkg: PackageJson) {
   // TODO use <img> tag if logo is a URL
-  const parts = [config.logo, config.name || pkg.name]
-  const title = parts.filter(identity).join(" ")
+  const name = config.name || titleCase(pkg.name!)
+  const title = [config.logo, name].filter(Boolean).join(" ")
 
   return html(`<h1 align="center">${title}</h1>`)
 }
