@@ -30,22 +30,22 @@
     "chalk": "^2.4.2",
     "change-case": "^3.1.0",
     "clean-deep": "^3.0.2",
-    "js-beautify": "^1.9.0",
+    "js-beautify": "^1.10.0",
     "lodash": "^4.17.11",
     "minimist": "^1.2.0",
-    "nehemiah": "^1.0.5",
-    "sort-keys": "^2.0.0",
+    "nehemiah": "^1.0.6",
+    "sort-keys": "^3.0.0",
     "sort-package-json": "^1.21.0"
   },
   "devDependencies": {
     "@n4bb12/config-tslint": "^1.4.1",
     "@types/chalk": "^2.2.0",
-    "@types/lodash": "^4.14.123",
+    "@types/lodash": "^4.14.129",
     "@types/minimist": "^1.2.0",
     "del-cli": "^1.1.0",
-    "ts-node": "^8.0.3",
-    "tslint": "^5.15.0",
-    "typescript": "^3.4.2"
+    "ts-node": "^8.1.0",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5"
   },
   "$schema": "http://json.schemastore.org/package"
 }
