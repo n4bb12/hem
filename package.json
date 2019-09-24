@@ -34,7 +34,7 @@
     "lodash": "^4.17.11",
     "minimist": "^1.2.0",
     "nehemiah": "^1.0.6",
-    "sort-keys": "^3.0.0",
+    "sort-keys": "^4.0.0",
     "sort-package-json": "^1.21.0"
   },
   "devDependencies": {
@@ -42,7 +42,7 @@
     "@types/chalk": "^2.2.0",
     "@types/lodash": "^4.14.129",
     "@types/minimist": "^1.2.0",
-    "del-cli": "^2.0.0",
+    "del-cli": "^3.0.0",
     "ts-node": "^8.1.0",
     "tslint": "^5.16.0",
     "typescript": "^3.4.5"
